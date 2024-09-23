@@ -1,0 +1,70 @@
+
+#Containermain{
+    
+    border: 2px solid rgb(148, 18, 18);
+    height: 400px;
+    width: 600px;
+    border-radius: 10px;
+    background-color: bisque;
+    
+}
+
+#countLabel{
+    display: block;
+    text-align:center;
+    font-size: 10em;
+    color:rgb(29, 29, 148);
+    font-family: Arial, Helvetica, sans-serif;
+}
+#buttonContainer{
+    text-align: center;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-direction: row;
+    gap:20px;
+    
+}
+.buttons {
+    padding: 10px 20px;
+    font-size: 1.5rem;
+    color: white;
+    background-color: hsl(214, 100%, 74%);
+    border-radius: 5px;
+    cursor: pointer;
+    transition: background-color 0.25s, transform 0.3s ease, box-shadow 0.3s ease;
+    position: relative;
+    overflow: hidden;
+}
+
+/* Amazing hover effect */
+.buttons:hover {
+    background-color: hsl(214, 100%, 54%);
+    transform: scale(1.1); /* Slightly enlarge the button */
+    box-shadow: 0 8px 15px rgba(0, 0, 0, 0.2); /* Add a shadow */
+}
+
+/* Add a cool text effect when hovered */
+.buttons:hover::after {
+    /* content: ' Click me! '; Text that will appear when you hover */
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    font-size: 1rem;
+    color: yellow;
+    opacity: 0;
+    animation: fadeIn 0.5s forwards;
+}
+
+/* Fade-in animation for the text */
+@keyframes fadeIn {
+    0% {
+        opacity: 0;
+        transform: translate(-50%, -60%);
+    }
+    100% {
+        opacity: 1;
+        transform: translate(-50%, -50%);
+    }
+}
